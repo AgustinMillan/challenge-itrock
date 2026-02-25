@@ -1,6 +1,4 @@
----
-
-# 🚀 Challenge Backend – Serverless API
+## 🚀 Challenge Backend – Serverless API
 
 **Node.js + Express + TypeScript + PostgreSQL**
 
@@ -146,15 +144,19 @@ GET /tasks?page=1&limit=10&completed=true&from=2026-02-20T21:00:03.000Z&to=2026-
 
 La respuesta incluye metadata de paginación:
 
+```
 {
-"data": [...],
-"meta": {
-"page": 1,
-"limit": 10,
-"total": 57,
-"totalPages": 6
+  "data": [...],
+  "meta": {
+    "page": 1,
+    "limit": 10,
+    "total": 57,
+    "totalPages": 6
+  }
 }
-}
+```
+
+---
 
 ## 📬 Postman Collection
 
