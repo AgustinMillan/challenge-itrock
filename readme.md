@@ -156,6 +156,18 @@ La respuesta incluye metadata de paginación:
 }
 }
 
+## 📬 Postman Collection
+
+Se incluye una colección de Postman para facilitar la prueba de los endpoints:
+
+- Archivo: `/postman/challenge-itrock.postman_collection.json`
+
+Para usarla:
+
+1. Abrir Postman
+2. Importar el archivo `.json`
+3. Ejecutar los requests de la colección
+
 ### 🧪 Usuario estático para pruebas de aislamiento
 
 Para facilitar las pruebas de aislamiento de datos entre usuarios (multi-tenant), se incluye un mecanismo de autenticación simple basado en credenciales estáticas definidas por entorno:

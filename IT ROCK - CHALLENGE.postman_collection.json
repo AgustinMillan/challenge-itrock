@@ -1,0 +1,250 @@
+{
+  "info": {
+    "_postman_id": "ca691f3b-fd91-4cc5-8d7b-7d8fda41b1df",
+    "name": "IT ROCK - CHALLENGE",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "23069791"
+  },
+  "item": [
+    {
+      "name": "Health",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/health",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "health"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Login",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"username\": \"challenge_user\",\n    \"password\": \"challenge_pass\"\n  }",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/auth/login",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "auth",
+            "login"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "get tasks",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJhZG1pbiIsImlhdCI6MTc3MjA1MTQxMSwiZXhwIjoxNzcyMDU1MDExfQ.cwbNB9hGrDukSRU_ISXuM9gOY5uvm_qUOJ7lSp7MznE"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:3000/tasks?page=1&limit=2&completed=true&from=2026-02-01T00:00:00.000Z&to=2026-02-25T21:00:03.000Z",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "tasks"
+          ],
+          "query": [
+            {
+              "key": "page",
+              "value": "1"
+            },
+            {
+              "key": "limit",
+              "value": "2"
+            },
+            {
+              "key": "completed",
+              "value": "true"
+            },
+            {
+              "key": "from",
+              "value": "2026-02-01T00:00:00.000Z"
+            },
+            {
+              "key": "to",
+              "value": "2026-02-25T21:00:03.000Z"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "edit task",
+      "request": {
+        "method": "PATCH",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJhZG1pbiIsImlhdCI6MTc3MjA1MTQxMSwiZXhwIjoxNzcyMDU1MDExfQ.cwbNB9hGrDukSRU_ISXuM9gOY5uvm_qUOJ7lSp7MznE"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"title\": \"Mi primera tarea\",\n    \"description\": \"Es un test2\",\n    \"completed\": true\n  }"
+        },
+        "url": {
+          "raw": "http://localhost:3000/tasks/2185d672-752a-4b4b-ba16-72bfce3a525b",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "tasks",
+            "2185d672-752a-4b4b-ba16-72bfce3a525b"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "create task",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJhZG1pbiIsImlhdCI6MTc3MjA1MTQxMSwiZXhwIjoxNzcyMDU1MDExfQ.cwbNB9hGrDukSRU_ISXuM9gOY5uvm_qUOJ7lSp7MznE"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"title\": \"Mi primera tarea\",\n    \"description\": \"Es un test\"\n  }",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/tasks",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "tasks"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "import tasks",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJhZG1pbiIsImlhdCI6MTc3MjA1MTQxMSwiZXhwIjoxNzcyMDU1MDExfQ.cwbNB9hGrDukSRU_ISXuM9gOY5uvm_qUOJ7lSp7MznE"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/tasks/import",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "tasks",
+            "import"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "del task",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJhZG1pbiIsImlhdCI6MTc3MjA1MTQxMSwiZXhwIjoxNzcyMDU1MDExfQ.cwbNB9hGrDukSRU_ISXuM9gOY5uvm_qUOJ7lSp7MznE"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"title\": \"Mi primera tarea\",\n    \"description\": \"Es un test\"\n  }"
+        },
+        "url": {
+          "raw": "http://localhost:3000/tasks/2185d672-752a-4b4b-ba16-72bfce3a525b",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "tasks",
+            "2185d672-752a-4b4b-ba16-72bfce3a525b"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
